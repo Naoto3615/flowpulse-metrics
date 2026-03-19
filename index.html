@@ -6,64 +6,88 @@
     <title>FlowPulse | SaaS Analytics</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="header shell">
-      <a class="logo" href="#">FlowPulse</a>
-      <nav>
+    <div class="bg-layer"></div>
+    <header class="site-header container">
+      <a class="brand" href="#top">FlowPulse</a>
+      <button class="menu-toggle" aria-expanded="false" aria-label="メニュー">☰</button>
+      <nav class="nav-links">
         <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
+        <a href="#metrics">Metrics</a>
+        <a href="#cases">Cases</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <a class="start" href="#pricing">Start Free</a>
     </header>
 
-    <main class="shell">
-      <section class="hero">
-        <p class="mono">B2B ANALYTICS SUITE</p>
-        <h1>MRR・解約率・LTVを、1画面で意思決定へ。</h1>
-        <p>請求データ、プロダクト利用データ、CSログを統合し、経営指標を毎朝自動更新します。</p>
+    <main id="top" class="container">
+      <section class="hero reveal">
+        <span class="badge">B2B ANALYTICS SUITE</span>
+        <div class="hero-grid">
+          <div>
+            <h1>MRR・解約率・LTVを、1画面で意思決定へ。</h1>
+            <p class="lead">請求、プロダクトログ、CRMをつなぎ、経営指標を毎朝自動更新。定例会議の準備工数を削減します。</p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#contact">デモを依頼</a>
+              <a class="btn ghost" href="#features">機能を見る</a>
+            </div>
+          </div>
+          <aside class="hero-stats">
+            <article><strong data-count="14" data-suffix="日">0日</strong><span>導入までの最短日数</span></article>
+            <article><strong data-count="67" data-suffix="%">0%</strong><span>レポート作成時間削減</span></article>
+            <article><strong data-count="4" data-suffix=".8">0.8</strong><span>LTV/CAC 目標達成企業比率</span></article>
+          </aside>
+        </div>
       </section>
 
-      <section class="kpi-grid">
-        <article><span>MRR</span><strong>¥12.4M</strong></article>
-        <article><span>Churn</span><strong>1.7%</strong></article>
-        <article><span>LTV/CAC</span><strong>4.6</strong></article>
-        <article><span>Expansion</span><strong>+18%</strong></article>
+      <section class="section reveal" id="features">
+        <div class="section-head"><span class="eyebrow">FEATURES</span><h2>主要機能</h2></div>
+        <div class="card-grid three">
+          <article class="card"><h3>Executive Board</h3><p>役員会で使える KPI だけを抽出し毎朝配信。</p><strong>Auto Report</strong></article>
+          <article class="card"><h3>Cohort Analysis</h3><p>プラン別・チャネル別の継続率を可視化。</p><strong>Retention View</strong></article>
+          <article class="card"><h3>Alert Automation</h3><p>異常値検知を Slack へ通知し初動を高速化。</p><strong>Real-time Alert</strong></article>
+        </div>
       </section>
 
-      <section class="features" id="features">
-        <article>
-          <h2>Executive Board</h2>
-          <p>重要指標だけを俯瞰できる、経営会議向けビュー。</p>
-        </article>
-        <article>
-          <h2>Cohort Analysis</h2>
-          <p>チャネル別・プラン別で継続率を分析。改善施策の優先度を可視化。</p>
-        </article>
-        <article>
-          <h2>Alert Automation</h2>
-          <p>異常値検知を Slack 通知。重要変化に即応できます。</p>
-        </article>
+      <section class="section reveal" id="metrics">
+        <div class="section-head"><span class="eyebrow">METRICS</span><h2>追跡できる指標</h2></div>
+        <div class="process-list">
+          <article><h3>Revenue</h3><p>MRR、Expansion、Net Revenue Retention を統合。</p></article>
+          <article><h3>Customer Health</h3><p>ログイン頻度とサポート履歴を掛け合わせ健康度を算出。</p></article>
+          <article><h3>Forecast</h3><p>次四半期の着地予測を自動算出し、差分を検知。</p></article>
+        </div>
       </section>
 
-      <section class="pricing" id="pricing">
-        <h2>Pricing</h2>
-        <p><strong>¥49,000 / month</strong> から。14日間の無料トライアル付き。</p>
+      <section class="section reveal" id="cases">
+        <div class="section-head"><span class="eyebrow">CASES</span><h2>導入事例</h2></div>
+        <div class="review-grid">
+          <blockquote>「週次定例の準備時間が半分以下になり、議論の質が上がりました。」</blockquote>
+          <blockquote>「解約兆候を早期発見でき、更新率が改善しました。」</blockquote>
+          <blockquote>「営業とCSで同じ数字を見て意思決定できるようになりました。」</blockquote>
+        </div>
       </section>
 
-      <section class="faq" id="faq">
-        <h2>FAQ</h2>
-        <details>
-          <summary>導入にどれくらいかかりますか？</summary>
-          <p>標準連携なら最短2営業日で初回ダッシュボードを公開できます。</p>
-        </details>
+      <section class="section reveal" id="contact">
+        <div class="contact-panel">
+          <div>
+            <span class="eyebrow">CONTACT</span>
+            <h2>プロダクトデモの依頼</h2>
+            <p>現在の課題と見たい指標を送信ください。データ連携案を添えてご案内します。</p>
+          </div>
+          <form class="contact-form">
+            <input type="text" placeholder="会社名" required />
+            <input type="email" placeholder="メールアドレス" required />
+            <textarea placeholder="課題や見たいKPI"></textarea>
+            <button type="submit" class="btn primary">送信する</button>
+          </form>
+        </div>
       </section>
     </main>
 
-    <footer class="shell">© <span id="year"></span> FlowPulse Inc.</footer>
+    <footer class="container">© <span id="year"></span> FlowPulse Inc.</footer>
+    <div class="toast" id="toast">ありがとうございます。デモ日程をご案内します。</div>
     <script src="app.js"></script>
   </body>
 </html>
